@@ -1,0 +1,87 @@
+/* Animated Haiku */
+body {
+    background: linear-gradient(to bottom, #93ee7e);
+    font-family: "Georgia", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.bg {
+    background-image: url('../images/expnsvx-ZoCpdw6_Lj8-unsplash\ \(1\).jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+div {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.haiku {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+.haiku span {
+    display: block;
+    margin: 8px 0;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+/* Delay each line for a staggered reveal */
+.haiku span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.haiku span:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.haiku span:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.haiku span:nth-child(4) {
+    animation-delay: 6s;
+}
+
+.haiku span:nth-child(5) {
+    animation-delay: 8s;
+}
+
+.haiku span:nth-child(6) {
+    animation-delay: 10s;
+}
+
+.author {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 11s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
